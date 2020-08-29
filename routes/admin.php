@@ -19,8 +19,16 @@ Route::group(
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],
     function () {
-        Route::get('admin/login', function () {
-            return view('admin.pages.login');
+
+        Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin', 'prefix' => 'admin'], function () {
+
+            Route::get('dashboard', 'DashboardController@index')->name('admin.dashboard');
+        });
+
+        Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin', 'prefix' => 'admin'], function () {
+
+            Route::get('login', 'LoginController@login')->name('admin.login');
+            Route::post('login', 'LoginController@postLogin')->name('admin.post.login');
         });
     }
 );

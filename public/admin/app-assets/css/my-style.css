@@ -1,3 +1,7 @@
+html, body * {
+    font-family: Roboto, Arial, sans-serif !important;
+}
+
 .bg-full-screen-image {
     background: url('/admin/app-assets/images/sallaty-login-bg.png') !important;
     background-size: cover;
@@ -8,3 +12,16 @@
     width: 20px !important;
     height: auto !important;
 }
+
+/* Start Sidebar  */
+#sidebar * {
+    background-color: #2f3640 !important;
+    color: #FFF !important;
+}
+/* End Sidebar  */
+
+/* Start Footer Dashboard  */
+.footer.footer-static.footer-light.navbar-border.navbar-shadow {
+    background-color: #2f3640 !important;
+}
+/* End Footer Dashboard  */

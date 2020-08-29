@@ -3,7 +3,7 @@
 
 <head>
   @include('admin.includes.login.meta')
-  <title>@yield('title', 'Admin Login | Sallaty')</title>
+  <title>@yield('title')</title>
   @include('admin.includes.login.styles')
 </head>
 

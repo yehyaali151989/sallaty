@@ -1,6 +1,8 @@
 @extends('admin.layouts.login')
 
-@section('title', 'Admin Login | Sallaty')
+@section('title')
+  {{ __('mine.Admin Login | Sallaty') }}
+@endsection
     
 @section('content')
   <div class="app-content content">
@@ -24,31 +26,41 @@
                 </li>
                 <div class="card-header border-0">
                   <div class="card-title text-center">
-                    <img src="{{ asset('admin/app-assets/images/logo/sallaty-logo.png') }}" alt="sallaty logo">
+                    <img src="{{ asset('admin/app-assets/images/logo/sallaty-logo.png') }}" alt="sallaty logo" width="128" height="128">
                   </div>
                 </div>
                 <div class="card-content">
                   <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
                     <span>{{ __('mine.Login Using Account Details') }}</span>
                   </p>
+                  @include('admin.includes.alerts.errors')
+                  @include('admin.includes.alerts.success')
                   <div class="card-body">
-                    <form class="form-horizontal" action="index.html" novalidate>
+                    <form class="form-horizontal" action="{{ route('admin.post.login') }}" method="POST">
+                      @csrf
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input type="text" class="form-control" id="user-name" placeholder="{{ __('mine.Enter Email') }}" required>
+                        <input type="text" name="email" class="@error('email') is-invalid @enderror form-control" value="{{old('email')}}" id="email" placeholder="{{ __('mine.Enter Email') }}">
                         <div class="form-control-position">
                           <i class="ft-user"></i>
                         </div>
+                        @error('email')
+                          <span class="text-danger" style="display:block; margin-bottom: 10px">{{$message}}</span>
+                        @enderror
                       </fieldset>
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input type="password" class="form-control" id="user-password" placeholder="{{ __('mine.Enter Password') }}" required>
+                        <input type="password" name="password" class="@error('email') is-invalid @enderror form-control" value="{{old('password')}}" id="password" placeholder="{{ __('mine.Enter Password') }}">
                         <div class="form-control-position">
-                          <i class="la la-key"></i>
+                          {{-- <i class="la la-key"></i> --}}
+                          <i class="ft-lock"></i>
                         </div>
+                        @error('password')
+                          <span class="text-danger" style="display:block; margin-bottom: 10px">{{$message}}</span>
+                        @enderror
                       </fieldset>
                       <div class="form-group row">
                         <div class="col-md-6 col-12 text-center text-sm-left">
                           <fieldset>
-                            <input type="checkbox" id="remember-me" class="chk-remember">
+                            <input type="checkbox" id="remember-me" class="chk-remember" name="remember_me">
                             <label for="remember-me">{{ __('mine.Remember Me') }}</label>
                           </fieldset>
                         </div>
