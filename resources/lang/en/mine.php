@@ -65,7 +65,7 @@ return [
     'Shpping Cost' => 'Shpping Cost',
     'Back' => 'Back',
     'Save' => 'Save',
-    '' => '',
+    'Logout Successfuly!' => 'Logout Successfuly!',
     '' => '',
     '' => '',
     '' => '',
