@@ -46,7 +46,7 @@
         </li> --}}
 
       {{-- Start Settings  --}}
-      <li class=" nav-item">
+      <li class="nav-item">
         <a href="#">
           {{-- <i class="la la-television"></i> --}}
           <i class="ft-settings"></i>

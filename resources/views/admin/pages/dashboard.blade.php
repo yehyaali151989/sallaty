@@ -102,7 +102,11 @@
       </div>
       <!--/ eCommerce statistic -->
 
-      <hr style="box-shadow: 0px 2px 2px #676767; margin-bottom: 30px">
+      {{-- <hr style="box-shadow: 0px 2px 2px #676767; margin-bottom: 30px"> --}}
+
+      <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1" style="margin-top: 50px !important">
+        <span style="font-size: 18px; color: #1e9ff2">{{ __('mine.Latest Reviews') }}</span>
+      </p>
       
 
 
@@ -174,7 +178,11 @@
       </div>
       <!--/ Products sell and New Orders -->
 
-      <hr style="box-shadow: 0px 2px 2px #676767; margin-bottom: 30px">
+      {{-- <hr style="box-shadow: 0px 2px 2px #676767; margin-bottom: 30px"> --}}
+
+      <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1" style="margin-top: 50px !important">
+        <span style="font-size: 18px; color: #1e9ff2">{{ __('mine.Latest Orders') }}</span>
+      </p>
 
 
       <!-- Recent Transactions -->
