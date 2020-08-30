@@ -57,45 +57,21 @@
             <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
             <ul class="menu-content">
               <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
+                <a class="menu-item" href="{{ route('edit.shippings.methods', 'free') }}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
               </li>
               <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
+                <a class="menu-item" href="{{ route('edit.shippings.methods', 'inner') }}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
               </li>
               <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
+                <a class="menu-item" href="{{ route('edit.shippings.methods', 'outer') }}" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
               </li>
             </ul>
           </li>
         </ul>
       </li>
       {{-- End Settings  --}}
-
+      {{-- =============================================================================================  --}}
       {{-- delete after  --}}
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
       <li class=" nav-item">
         <a href="#">
           {{-- <i class="la la-television"></i> --}}
