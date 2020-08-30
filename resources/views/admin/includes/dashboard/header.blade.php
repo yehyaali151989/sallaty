@@ -68,16 +68,24 @@
               </a>
             </div>
           </li>
+
+
           <li class="dropdown dropdown-language nav-item">
             <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="flag-icon @if(app()->getLocale() == 'ar') flag-icon-sy @endif flag-icon-gb"></i>
               <span class="selected-language"></span>
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdown-flag">
-              <a class="dropdown-item en" href="#"><i class="flag-icon flag-icon-gb"></i> English</a>
-              <a class="dropdown-item ar" href="#"><i class="flag-icon flag-icon-sy"></i> العربية</a>
+              @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                  <i class="flag-icon @if($properties['native'] === 'العربية') flag-icon-sy @endif flag-icon-gb"></i>
+                  {{ $properties['native'] }}
+                </a>
+              @endforeach
             </div>
           </li>
+
+          
           <li class="dropdown dropdown-notification nav-item">
             <a class="nav-link nav-link-label" href="#" data-toggle="dropdown">
               <i class="ficon ft-bell"></i>

@@ -53,7 +53,7 @@ return [
     'Yehya Ali' => 'يحيى علي',
     'Iphone8' => 'آيفون8',
     'five' => '5',
-    'Latest Orders' => 'أحدث الطلبات',
+    'Latest Orders' => 'آخر الطلبات',
     'Order Number' => 'رقم الطلب',
     'Customer Name' => 'اسم العميل',
     'Price' => 'السعر',
