@@ -48,6 +48,7 @@
               <span class="mr-1">
                 {{-- {{ __('mine.Hello,') }} --}}
                 {{-- <span class="user-name text-bold-700">{{ Auth::user()->name }}</span> --}}
+                <span class="user-name text-bold-700">{{auth('admin')->user()->name }}</span>
                 {{-- <span class="user-name text-bold-700">yehya</span> --}}
               </span>
               <span class="avatar avatar-online">
@@ -61,7 +62,7 @@
                 {{ __('mine.Edit Profile') }}
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="{{ route('admin.logout') }}">
                 <i class="ft-power"></i> 
                 {{ __('mine.Logout') }}
               </a>

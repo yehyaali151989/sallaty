@@ -33,4 +33,18 @@ class LoginController extends Controller
         // notify()->error('خطا في البيانات  برجاء المجاولة مجدا ');
         return redirect()->back()->with(['error' => "These credentials do not match our records."]);
     }
+
+    public function logout() 
+    {
+        $gaurd = $this->getGaurd();
+
+        $gaurd->logout();
+
+        return redirect()->route('admin.login')->with(['success' => 'Logout Successfuly!']);
+    }
+
+    private function getGaurd() 
+    {
+        return auth('admin');
+    }
 }
