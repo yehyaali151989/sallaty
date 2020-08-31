@@ -17,6 +17,7 @@ html, body * {
 #sidebar * {
     background-color: #2f3640 !important;
     color: #FFF !important;
+    overflow: visible;
 }
 
 .nav-item .menu-title {
