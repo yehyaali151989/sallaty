@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,12 @@ Route::group(
             Route::group(['prefix' => 'settings'], function () {
                 Route::get('shipping-methods/{type}', 'SettingsController@editShippingMethods')->name('edit.shippings.methods');
                 Route::put('shipping-methods/{id}', 'SettingsController@updateShippingMethods')->name('update.shippings.methods');
+            });
+
+            Route::group(['prefix' => 'profile'], function () {
+                Route::get('edit', 'ProfileController@editProfile')->name('edit.profile.admin');
+                Route::put('update', 'ProfileController@updateProfile')->name('update.profile.admin');
+                // Route::put('update/password', 'ProfileController@updatePassword')->name('update.profile.password.admin');
             });
             
         });
