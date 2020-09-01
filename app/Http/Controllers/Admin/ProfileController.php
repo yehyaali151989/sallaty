@@ -22,6 +22,14 @@ class ProfileController extends Controller
 
             $admin = Admin::find(auth('admin')->user()->id);
 
+            // $file_extension = $request->photo->getClientOriginalExtension();
+
+            // $file_name = time() . '.' . $file_extension;
+
+            // $path = 'admin/uploads';
+
+            // $request->photo->move($path, $file_name);
+
             if ($request->filled('password')) {
 
                 $request->merge(['password' => bcrypt($request->password)]);
@@ -39,5 +47,4 @@ class ProfileController extends Controller
             return redirect()->back()->with(['error' => 'هناك خطا ما يرجي المحاولة فيما بعد']);
         }
     }
-
 }

@@ -72,7 +72,7 @@ return [
     'Email' => 'Email',
     'New Password' => 'New Password',
     'Confirm New Password' => 'Confirm New Password',
-    '' => '',
+    'Upload Photo' => 'Upload Photo',
     '' => '',
     '' => '',
     '' => '',

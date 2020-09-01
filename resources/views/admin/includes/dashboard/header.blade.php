@@ -57,7 +57,7 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="{{ route('edit.profile.admin') }}">
                 <i class="ft-user"></i> 
                 {{ __('mine.Edit Profile') }}
               </a>

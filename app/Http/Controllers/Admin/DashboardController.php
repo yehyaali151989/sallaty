@@ -9,6 +9,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        // $admin = Admin::find(auth('admin')->user()->id);
         return view('admin.pages.dashboard');
     }
 }
