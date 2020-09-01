@@ -34,7 +34,6 @@ Route::group(
             Route::group(['prefix' => 'profile'], function () {
                 Route::get('edit', 'ProfileController@editProfile')->name('edit.profile.admin');
                 Route::put('update', 'ProfileController@updateProfile')->name('update.profile.admin');
-                // Route::put('update/password', 'ProfileController@updatePassword')->name('update.profile.password.admin');
             });
             
         });

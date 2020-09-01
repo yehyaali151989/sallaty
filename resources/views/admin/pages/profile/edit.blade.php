@@ -72,7 +72,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="password">{{ __('mine.New Password') }}</label>
                                                             <input type="password" value="" id="password" class="@error('password') is-invalid @enderror form-control" name="password">
@@ -82,7 +82,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="password_confirmation">{{ __('mine.Confirm New Password') }}</label>
                                                             <input type="password" value="" id="password_confirmation" class="@error('password_confirmation') is-invalid @enderror form-control" name="password_confirmation">
@@ -91,6 +91,18 @@
                                                             @enderror
                                                         </div>
                                                     </div>
+
+                                                    {{-- foto  --}}
+                                                    {{--  <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="photo">{{ __('mine.Upload Photo') }}</label>
+                                                            <input type="file" value="" id="photo" class="@error('photo') is-invalid @enderror form-control" name="photo">
+                                                            @error("photo")
+                                                            <span class="text-danger">{{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>  --}}
+                                                    {{-- foto  --}}
                                                 </div>
                                             </div>
                                             <div class="form-actions">
