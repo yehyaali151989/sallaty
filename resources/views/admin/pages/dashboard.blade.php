@@ -167,6 +167,11 @@
                         <td class="text-truncate">{{ __('mine.Iphone8') }}</td>
                         <td class="text-truncate">{{ __('mine.five') }}</td>
                       </tr>
+                      <tr>
+                        <td class="text-truncate">{{ __('mine.Alaa Hanbali') }}</td>
+                        <td class="text-truncate">{{ __('mine.Iphone8') }}</td>
+                        <td class="text-truncate">{{ __('mine.five') }}</td>
+                      </tr>
                       {{-- delete after  --}}
                     </tbody>
                   </table>

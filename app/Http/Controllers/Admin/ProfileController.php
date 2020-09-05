@@ -25,10 +25,13 @@ class ProfileController extends Controller
             if ($request->filled('password')) {
 
                 $request->merge(['password' => bcrypt($request->password)]);
+            } else {
+                unset($request['password']);
+                unset($request['password_confirmation']);
             }
 
             unset($request['id']);
-            unset($request['password_confirmation']);
+
 
 
             $admin->update($request->all());
@@ -39,5 +42,4 @@ class ProfileController extends Controller
             return redirect()->back()->with(['error' => 'هناك خطا ما يرجي المحاولة فيما بعد']);
         }
     }
-
 }

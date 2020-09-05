@@ -48,7 +48,6 @@
       {{-- Start Settings  --}}
       <li class="nav-item">
         <a href="#">
-          {{-- <i class="la la-television"></i> --}}
           <i class="ft-settings"></i>
           <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
         </a>
@@ -70,296 +69,24 @@
         </ul>
       </li>
       {{-- End Settings  --}}
-      {{-- =============================================================================================  --}}
-      {{-- delete after  --}}
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
 
+      {{-- Start Main Categories  --}}
       <li class=" nav-item">
         <a href="#">
-          {{-- <i class="la la-television"></i> --}}
           <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
+          <span class="menu-title" data-i18n="nav.dash.main">{{ __('mine.Main Categories') }}</span>
+          <span class="badge badge badge-info badge-pill float-right mr-2">3</span>
         </a>
         <ul class="menu-content">
           <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
+            <a class="menu-item" href="{{ route('main_categories.index') }}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Show All') }}</a>
+          </li>
+          <li class="">
+            <a class="menu-item" href="{{ route('main_categories.create') }}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Add New One') }}</a>
           </li>
         </ul>
       </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class=" nav-item">
-        <a href="#">
-          {{-- <i class="la la-television"></i> --}}
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.templates.main">{{ __('mine.Settings') }}</span>
-        </a>
-        <ul class="menu-content">
-          <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{ __('mine.Shipping Methods') }}</a>
-            <ul class="menu-content">
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Free Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Local Shipping') }}</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#" data-i18n="nav.templates.vert.compact_menu">{{ __('mine.Outer Shipping') }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      {{-- delete after  --}}
+      {{-- End Main Categories  --}}
     </ul>
   </div>
 </div>

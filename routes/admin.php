@@ -34,9 +34,15 @@ Route::group(
             Route::group(['prefix' => 'profile'], function () {
                 Route::get('edit', 'ProfileController@editProfile')->name('edit.profile.admin');
                 Route::put('update', 'ProfileController@updateProfile')->name('update.profile.admin');
-                // Route::put('update/password', 'ProfileController@updatePassword')->name('update.profile.password.admin');
             });
-            
+
+            // ================================== Begin Categories Routes ========================================== //
+            Route::group(['prefix' => ''], function () {
+                Route::resource('main_categories', 'MainCategoriesController')->except('show');
+                Route::get('main_categories/{id}', 'MainCategoriesController@destroy')->name('main_categories.destroy');
+            });
+            // ================================== End Categories Routes ============================================ //
+
         });
 
         Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin', 'prefix' => 'admin'], function () {
