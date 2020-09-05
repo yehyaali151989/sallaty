@@ -2,16 +2,6 @@
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used during authentication for various
-    | messages that we need to display to the user. You are free to modify
-    | these language lines according to your application's requirements.
-    |
-    */
 
     'Enter Email' => 'Enter Email',
     'Enter Password' => 'Enter Password',
@@ -68,15 +58,12 @@ return [
     'Logout Successfuly!' => 'Done Successfuly!',
     'Edit Shipping Methods | Sallaty' => 'Edit Shipping Methods | Sallaty',
     'Edit Profile | Sallaty' => 'Edit Profile | Sallaty',
-    'Edit Profile' => 'Edit Profile',
     'Email' => 'Email',
     'New Password' => 'New Password',
     'Confirm New Password' => 'Confirm New Password',
-    'All Main Categories' => 'All Main Categories',
     'Slug' => 'Slug',
     'Status' => 'Status',
     'Photo' => 'Photo',
-    'Actions' => 'Actions',
     'Edit' => 'Edit',
     'Delete' => 'Delete',
     'Active' => 'Active',
@@ -86,34 +73,13 @@ return [
     'Main Categories' => 'Main Categories',
     'Show All' => 'Show All',
     'Add New One' => 'Add New One',
-    'Slug' => 'Slug',
-    'Status' => 'Status',
     'Category Photo' => 'Category Photo',
     'Actions' => 'Actions',
-    'Edit' => 'Edit',
-    'Delete' => 'Delete',
-    'Edit Main Category' => 'Edit Main Category',
     'Category Data' => 'Category Data',
     'Update' => 'Update',
     'Add New Category' => 'Add New Category',
     'Added Successfuly.' => 'Added Successfuly.',
     'Udpated Successfuly.' => 'Udpated Successfuly.',
-    'Deleted Successfuly.' => 'Deleted Successfuly.',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
+    'Deleted Successfuly.' => 'Deleted Successfuly.'
     
-
-
 ];

@@ -2,17 +2,6 @@
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used during authentication for various
-    | messages that we need to display to the user. You are free to modify
-    | these language lines according to your application's requirements.
-    |
-    */
-
     'Enter Email' => 'أدخل البريد الإلكتروني',
     'Enter Password' => 'أدخل كلمة المرور',
     'Login Using Account Details' => 'تسجيل الدخول باستخدام تفاصيل الحساب',
@@ -25,7 +14,6 @@ return [
     'Search...' => 'بحث',
     'Hello,' => 'مرحبا,',
     'avatar' => 'صورة الآدمن',
-    'Edit Profile' => 'تعديل الملف الشخصي',
     'Logout' => 'تسجيل خروج',
     'Notifications' => 'إشعارات',
     'You have new order!' => 'لديك طلب جديد!',
@@ -74,7 +62,6 @@ return [
     'Confirm New Password' => 'تأكيد كلمة المرور الجديدة',
     'All Main Categories' => 'جميع الأقسام الرئيسية',
     'Slug' => 'الاسم بالرابط',
-    'Status' => 'الحالة',
     'Photo' => 'صورة',
     'Actions' => 'الإجراءات',
     'Edit' => 'تعديل',
@@ -83,36 +70,15 @@ return [
     'Inactive' => 'غير مفعل',
     'This Element Does not Exist' => 'هذا العنصر غير موجود',
     'Edit Main Category' => 'تعديل القسم الرئيسي',
-    'slug' => 'الاسم بالرابط',
     'Main Categories' => 'الأقسام الرئيسية',
     'Show All' => 'عرض الكل',
     'Add New One' => 'إضافة واحد جديد',
-    'Slug' => 'الاسم بالرابط',
-    'Status' => 'الحالة',
     'Category Photo' => 'صوره القسم',
-    'Actions' => 'الإجراءات',
-    'Edit' => 'تعديل',
-    'Delete' => 'حذف',
-    'Edit Main Category' => 'تعديل القسم الرئيسي',
     'Category Data' => 'بيانات القسم',
     'Update' => 'تحديث',
     'Add New Category' => 'إضافة قسم جديد',
     'Added Successfuly.' => 'تمت الإضافة بنجاح',
     'Udpated Successfuly.' => 'تمت التعديل بنجاح',
-    'Deleted Successfuly.' => 'تم الحذف بنجاح',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-
-    
-
+    'Deleted Successfuly.' => 'تم الحذف بنجاح'
 
 ];
