@@ -80,6 +80,21 @@ return [
     'Add New Category' => 'Add New Category',
     'Added Successfuly.' => 'Added Successfuly.',
     'Udpated Successfuly.' => 'Udpated Successfuly.',
-    'Deleted Successfuly.' => 'Deleted Successfuly.'
+    'Deleted Successfuly.' => 'Deleted Successfuly.',
+    'Sub Categories' => 'Sub Categories',
+    'All Sub Categories' => 'All Sub Categories',
+    'Select Category' => 'Select Category',
+    'Add New Sub Category' => 'Add New Sub Category',
+    'Edit Sub Category' => 'Edit Sub Category',
+    'Sub Category Data' => 'Sub Category Data',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    
+
     
 ];

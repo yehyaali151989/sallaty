@@ -17,11 +17,15 @@ html, body * {
 #sidebar * {
     background-color: #2f3640 !important;
     color: #FFF !important;
-    overflow: visible;
+}
+
+#span-count
+{
+    background-color: #ff4358 !important;
 }
 
 .nav-item .menu-title {
-    font-size: 14px !important;
+    font-size: 13px !important;
 }
 /* End Sidebar  */
 

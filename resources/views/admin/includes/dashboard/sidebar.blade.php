@@ -75,7 +75,7 @@
         <a href="#">
           <i class="ft-settings"></i>
           <span class="menu-title" data-i18n="nav.dash.main">{{ __('mine.Main Categories') }}</span>
-          <span class="badge badge badge-info badge-pill float-right mr-2">3</span>
+          <span id="span-count" class="badge badge badge-info badge-pill float-right mr-2">{{ App\Models\Category::parent()->count() }}</span>
         </a>
         <ul class="menu-content">
           <li>
@@ -87,6 +87,24 @@
         </ul>
       </li>
       {{-- End Main Categories  --}}
+
+      {{-- Start Sub Categories  --}}
+      <li class=" nav-item">
+        <a href="#">
+          <i class="ft-settings"></i>
+          <span class="menu-title" data-i18n="nav.dash.main">{{ __('mine.Sub Categories') }}</span>
+          <span id="span-count" class="badge badge badge-info badge-pill float-right mr-2">{{ App\Models\Category::child()->count() }}</span>
+        </a>
+        <ul class="menu-content">
+          <li>
+            <a class="menu-item" href="{{ route('sub_categories.index') }}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Show All') }}</a>
+          </li>
+          <li class="">
+            <a class="menu-item" href="{{ route('sub_categories.create') }}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Add New One') }}</a>
+          </li>
+        </ul>
+      </li>
+      {{-- End Sub Categories  --}}
     </ul>
   </div>
 </div>

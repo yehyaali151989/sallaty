@@ -36,12 +36,19 @@ Route::group(
                 Route::put('update', 'ProfileController@updateProfile')->name('update.profile.admin');
             });
 
-            // ================================== Begin Categories Routes ========================================== //
+            // ================================== Begin Main Categories Routes ========================================== //
             Route::group(['prefix' => ''], function () {
                 Route::resource('main_categories', 'MainCategoriesController')->except('show');
                 Route::get('main_categories/{id}', 'MainCategoriesController@destroy')->name('main_categories.destroy');
             });
-            // ================================== End Categories Routes ============================================ //
+            // ================================== End Main Categories Routes ============================================ //
+
+            // ================================== Begin Sub Categories Routes ========================================== //
+            Route::group(['prefix' => ''], function () {
+                Route::resource('sub_categories', 'SubCategoriesController')->except('show');
+                Route::get('sub_categories/{id}', 'SubCategoriesController@destroy')->name('main_categories.destroy');
+            });
+            // ================================== End Sub Categories Routes ============================================ //
 
         });
 

@@ -79,6 +79,20 @@ return [
     'Add New Category' => 'إضافة قسم جديد',
     'Added Successfuly.' => 'تمت الإضافة بنجاح',
     'Udpated Successfuly.' => 'تمت التعديل بنجاح',
-    'Deleted Successfuly.' => 'تم الحذف بنجاح'
+    'Deleted Successfuly.' => 'تم الحذف بنجاح',
+    'Sub Categories' => 'الأقسام الفرعية',
+    'All Sub Categories' => 'جميع الأقسام الفرعية',
+    'Select Category' => 'أختر قسم',
+    'Add New Sub Category' => 'اضافة قسم فرعي جديد',
+    'Edit Sub Category' => 'تعديل قسم فرعي',
+    'Sub Category Data' => 'بيانات القسم الفرعي',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
 
 ];
