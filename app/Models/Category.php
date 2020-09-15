@@ -57,4 +57,9 @@ class Category extends Model
     {
         return $this->is_active == 1 ? __('mine.Active') : __('mine.Inactive');
     }
+
+    public function _parent()
+    {
+        return $this->belongsTo(self::class, 'parent_id');
+    }
 }

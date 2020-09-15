@@ -64,6 +64,7 @@
                     <thead class="">
                       <tr>
                         <th>{{ __('mine.Name') }}</th>
+                        <th>{{ __('mine.Category') }}</th>
                         <th>{{ __('mine.Slug') }}</th>
                         <th>{{ __('mine.Status') }}</th>
                         <th>{{ __('mine.Photo') }}</th>
@@ -75,6 +76,7 @@
                         @foreach($categories as $category)
                           <tr>
                             <td>{{ $category->name }}</td>
+                            <td>{{ $category->_parent->name }}</td>
                             <td>{{ $category->slug }}</td>
                             <td>{{ $category->getActive() }}</td>
                             <td>
