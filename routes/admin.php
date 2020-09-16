@@ -57,6 +57,13 @@ Route::group(
             });
             // ================================== End Brands Routes ============================================ //
 
+            // ================================== Begin Tags Routes ========================================== //
+            Route::group(['prefix' => ''], function () {
+                Route::resource('tags', 'TagsController')->except('show');
+                Route::get('tags/{id}', 'TagsController@destroy')->name('tags.destroy');
+            });
+            // ================================== End Tags Routes ============================================ //
+
         });
 
         Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin', 'prefix' => 'admin'], function () {

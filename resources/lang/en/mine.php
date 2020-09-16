@@ -95,17 +95,17 @@ return [
     'Brand Data' => 'Brand Data',
     'Change Photo' => 'Change Photo',
     'Edit Brands' => 'Edit Brands',
+    'Tags' => 'Tags',
+    'All Tags' => 'All Tags',
+    'Add New Tag' => 'Add New Tag',
+    'Edit Tag' => 'Edit Tag',
+    'Tag Data' => 'Tag Data',
     '' => '',
     '' => '',
     '' => '',
     '' => '',
     '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    
 
-    
+
+
 ];
