@@ -53,6 +53,14 @@
                                             <div class="form-body">
                                                 <div class="row">
                                                     <div class="col-md-6">
+                                                        <img class="img-thumbnail" style="width: 200px; height: 200px; border-radius: 50%" src="{{ $admin->photo ? $admin->photo : asset('admin/app-assets/images/yehya.jpg') }}" alt="{{ $admin->name }}">
+                                                    </div>
+
+                                                    
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="name">{{ __('mine.Name') }}</label>
                                                             <input type="text" value="{{$admin->name}}" id="name" class="@error('name') is-invalid @enderror form-control" name="name">
@@ -88,6 +96,21 @@
                                                             <input type="password" value="" id="password_confirmation" class="@error('password_confirmation') is-invalid @enderror form-control" name="password_confirmation">
                                                             @error("password_confirmation")
                                                             <span class="text-danger">{{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>{{ __('mine.Change Photo') }}</label>
+                                                            <label id="projectinput7" class="file center-block">
+                                                                <input type="file" id="file" name="photo" />
+                                                                <span class="file-custom"></span>
+                                                            </label>
+                                                            @error('photo')
+                                                            <span class="text-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
                                                     </div>

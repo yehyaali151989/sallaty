@@ -64,7 +64,7 @@
                     <thead class="">
                       <tr>
                         <th>{{ __('mine.Name') }}</th>
-                        <th>{{ __('mine.Category') }}</th>
+                        <th>{{ __('mine.Main Category') }}</th>
                         <th>{{ __('mine.Slug') }}</th>
                         <th>{{ __('mine.Status') }}</th>
                         <th>{{ __('mine.Photo') }}</th>

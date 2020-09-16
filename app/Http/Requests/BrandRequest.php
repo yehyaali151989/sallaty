@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProfileRequest extends FormRequest
+class BrandRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +25,7 @@ class ProfileRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email|unique:admins,email,' . $this->id,
-            'password' => 'nullable|confirmed|min:8',
-            // 'photo' => 'required_without:id|mimes:jpg,jpeg,png'
+            'photo' => 'required_without:id|mimes:jpg,jpeg,png'
         ];
     }
 }

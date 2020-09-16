@@ -46,9 +46,16 @@ Route::group(
             // ================================== Begin Sub Categories Routes ========================================== //
             Route::group(['prefix' => ''], function () {
                 Route::resource('sub_categories', 'SubCategoriesController')->except('show');
-                Route::get('sub_categories/{id}', 'SubCategoriesController@destroy')->name('main_categories.destroy');
+                Route::get('sub_categories/{id}', 'SubCategoriesController@destroy')->name('sub_categories.destroy');
             });
             // ================================== End Sub Categories Routes ============================================ //
+
+            // ================================== Begin Brands Routes ========================================== //
+            Route::group(['prefix' => ''], function () {
+                Route::resource('brands', 'BrandsController')->except('show');
+                Route::get('brands/{id}', 'BrandsController@destroy')->name('brands.destroy');
+            });
+            // ================================== End Brands Routes ============================================ //
 
         });
 

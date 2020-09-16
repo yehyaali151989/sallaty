@@ -32,9 +32,18 @@ class ProfileController extends Controller
 
             unset($request['id']);
 
+            $fileName = "";
+            if ($request->has('photo')) {
 
+                $fileName = uploadImage('admins', $request->photo);
+                $admin->photo = $fileName;
+            } else {
+                unset($request['photo']);
+            }
 
             $admin->update($request->all());
+
+            $admin->save();
 
             return redirect()->back()->with(['success' => 'تم التحديث بنجاح']);
         } catch (\Exception $ex) {

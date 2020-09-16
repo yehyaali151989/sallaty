@@ -52,7 +52,7 @@
                 {{-- <span class="user-name text-bold-700">yehya</span> --}}
               </span>
               <span class="avatar avatar-online">
-                <img src="{{ asset('admin/app-assets/images/yehya.jpg') }}" alt="{{ __('mine.avatar') }}">
+                <img class="img-thumbnail img-responsive" style="height: 36px; width: 36px" src="{{ auth('admin')->user()->photo ? auth('admin')->user()->photo : asset('admin/app-assets/images/yehya.jpg') }}" alt="{{ __('mine.avatar') }}">
                 <i></i>
               </span>
             </a>

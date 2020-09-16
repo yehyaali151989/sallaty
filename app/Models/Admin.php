@@ -16,4 +16,9 @@ class Admin extends Authenticatable
     protected $guarded = [];
 
     public $timestamps = true;
+
+    public function  getPhotoAttribute($val)
+    {
+        return ($val !== null) ? asset('admin/uploads/admins/' . $val) : "";
+    }
 }
