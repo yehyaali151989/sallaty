@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\MainCategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\MainCategoryRequest;
 
 class MainCategoriesController extends Controller
 {
@@ -17,8 +17,8 @@ class MainCategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Category::parent()->orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
 
+        $categories = Category::with('_parent')->orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
         return view('admin.pages.categories.index', compact('categories'));
     }
 
@@ -29,7 +29,8 @@ class MainCategoriesController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.categories.create');
+        $categories =   Category::select('id', 'parent_id')->get();
+        return view('admin.pages.categories.create', compact('categories'));
     }
 
     /**
@@ -48,6 +49,13 @@ class MainCategoriesController extends Controller
                 $request->request->add(['is_active' => 0]);
             } else {
                 $request->request->add(['is_active' => 1]);
+            }
+
+            //if user choose main category then we must remove paret id from the request
+
+            if ($request->type == 1) //main category
+            {
+                $request->request->add(['parent_id' => null]);
             }
 
             $category = Category::create($request->except('_token'));

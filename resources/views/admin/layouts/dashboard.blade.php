@@ -4,7 +4,7 @@
 
   @include('admin.includes.dashboard.meta')
 
-  <title>@yield('title')</title>
+  <title>@yield('title', 'eStore')</title>
 
   @include('admin.includes.dashboard.styles')
 
@@ -21,6 +21,8 @@
   @include('admin.includes.dashboard.footer')
 
   @include('admin.includes.dashboard.scripts')
+
+  @yield('script')
 
 </body>
 </html>

@@ -44,10 +44,10 @@ Route::group(
             // ================================== End Main Categories Routes ============================================ //
 
             // ================================== Begin Sub Categories Routes ========================================== //
-            Route::group(['prefix' => ''], function () {
-                Route::resource('sub_categories', 'SubCategoriesController')->except('show');
-                Route::get('sub_categories/{id}', 'SubCategoriesController@destroy')->name('sub_categories.destroy');
-            });
+            // Route::group(['prefix' => ''], function () {
+            //     Route::resource('sub_categories', 'SubCategoriesController')->except('show');
+            //     Route::get('sub_categories/{id}', 'SubCategoriesController@destroy')->name('sub_categories.destroy');
+            // });
             // ================================== End Sub Categories Routes ============================================ //
 
             // ================================== Begin Brands Routes ========================================== //
