@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Http\Enumerations\CategoryType;
 use App\Http\Requests\MainCategoryRequest;
 
 class MainCategoriesController extends Controller
@@ -53,7 +54,7 @@ class MainCategoriesController extends Controller
 
             //if user choose main category then we must remove paret id from the request
 
-            if ($request->type == 1) //main category
+            if ($request->type == CategoryType::mainCategory) //main category
             {
                 $request->request->add(['parent_id' => null]);
             }
