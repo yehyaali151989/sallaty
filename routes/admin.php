@@ -64,6 +64,14 @@ Route::group(
             });
             // ================================== End Tags Routes ============================================ //
 
+            // ================================== Begin Products ========================================== //
+            Route::group(['prefix' => 'products'], function () {
+                Route::get('/', 'ProductsController@index')->name('admin.products');
+                Route::get('general-information', 'ProductsController@create')->name('products.general.create');
+                Route::post('store-general-information', 'ProductsController@store')->name('products.general.store');
+            });
+            // ================================== End Products ============================================ //
+
         });
 
         Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin', 'prefix' => 'admin'], function () {

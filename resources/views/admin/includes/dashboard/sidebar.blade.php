@@ -142,6 +142,24 @@
       </li>
       {{-- End Brands  --}}
 
+      {{-- Start Products  --}}
+      <li class=" nav-item">
+        <a href="#">
+          <i class="ft-settings"></i>
+          <span class="menu-title" data-i18n="nav.dash.main">{{ __('mine.Products') }}</span>
+          <span id="span-count" class="badge badge badge-info badge-pill float-right mr-2">{{ App\Models\Product::count() }}</span>
+        </a>
+        <ul class="menu-content">
+          <li>
+            <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Show All') }}</a>
+          </li>
+          <li class="">
+            <a class="menu-item" href="{{ route('products.general.create') }}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Add New One') }}</a>
+          </li>
+        </ul>
+      </li>
+      {{-- End Products  --}}
+
     </ul>
   </div>
 </div>
