@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Tag;
 use App\Models\Brand;
+use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Enumerations\CategoryType;
 use App\Http\Requests\GeneralProductRequest;
+use App\Http\Requests\ProductPriceValidation;
 
 class ProductsController extends Controller
 {
@@ -20,7 +22,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::select('id', 'slug', 'price', 'created_at')->paginate(PAGINATION_COUNT);
+        return view('admin.pages.products.general.index', compact('products'));
     }
 
     /**
@@ -46,83 +49,52 @@ class ProductsController extends Controller
      */
     public function store(GeneralProductRequest $request)
     {
-        // try {
+        DB::beginTransaction();
 
-        //     // DB::beginTransaction();
+        //validation
 
-        //     //validation
+        if (!$request->has('is_active'))
+            $request->request->add(['is_active' => 0]);
+        else
+            $request->request->add(['is_active' => 1]);
 
-        //     if (!$request->has('is_active'))
-        //         $request->request->add(['is_active' => 0]);
-        //     else
-        //         $request->request->add(['is_active' => 1]);
+        $product = Product::create([
+            'slug' => $request->slug,
+            'brand_id' => $request->brand_id,
+            'is_active' => $request->is_active,
+        ]);
+        //save translations
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->short_description = $request->short_description;
+        $product->save();
 
-        //     //if user choose main category then we must remove paret id from the request
+        //save product categories
 
-        //     if ($request->type == CategoryType::mainCategory) //main category
-        //     {
-        //         $request->request->add(['parent_id' => null]);
-        //     }
+        $product->categories()->attach($request->categories);
 
-        //     //if he choose child category we mus t add parent id
+        //save product tags
 
+        $product->tags()->attach($request->tags);
 
-        //     $category = Category::create($request->except('_token'));
-
-        //     //save translations
-        //     $category->name = $request->name;
-        //     $category->save();
-
-        //     return redirect()->route('main_categories.index')->with(['success' => 'تم ألاضافة بنجاح']);
-        //     // DB::commit();
-        // } catch (\Exception $ex) {
-        //     // DB::rollback();
-        //     return redirect()->route('main_categories.index')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
-        // }
+        DB::commit();
+        return redirect()->route('products.index')->with(['success' => 'تم ألاضافة بنجاح']);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function getPrice($product_id)
     {
-        //
+
+        return view('admin.pages.products.prices.create')->with('id', $product_id);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function saveProductPrice(ProductPriceValidation $request)
     {
-        //
-    }
+        try {
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+            Product::whereId($request->product_id)->update($request->only(['price', 'special_price', 'special_price_type', 'special_price_start', 'special_price_end']));
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+            return redirect()->route('products.index')->with(['success' => 'تم التحديث بنجاح']);
+        } catch (\Exception $ex) {
+        }
     }
 }

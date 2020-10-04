@@ -66,9 +66,15 @@ Route::group(
 
             // ================================== Begin Products ========================================== //
             Route::group(['prefix' => 'products'], function () {
-                Route::get('/', 'ProductsController@index')->name('admin.products');
+                Route::get('/', 'ProductsController@index')->name('products.index');
                 Route::get('general-information', 'ProductsController@create')->name('products.general.create');
                 Route::post('store-general-information', 'ProductsController@store')->name('products.general.store');
+
+                Route::get('price/{id}', 'ProductsController@getPrice')->name('products.price');
+                Route::post('price', 'ProductsController@saveProductPrice')->name('products.price.store');
+
+                Route::get('stock/{id}', 'ProductsController@getStock')->name('products.stock');
+                Route::post('stock', 'ProductsController@saveProductStock')->name('products.stock.store');
             });
             // ================================== End Products ============================================ //
 

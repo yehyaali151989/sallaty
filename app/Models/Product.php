@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
-    use Translatable, SoftDeletes;
+    use Translatable,
+        SoftDeletes;
 
     /**
      * The relations to eager load on every query.
@@ -84,10 +85,17 @@ class Product extends Model
         return $this->belongsTo(Brand::class)->withDefault();
     }
 
+    public function getActive()
+    {
+        return  $this->is_active  == 1 ?  'غير مفعل'   : 'مفعل';
+    }
+
     public function categories()
     {
         return $this->belongsToMany(Category::class, 'products_categories');
     }
+
+
 
     public function tags()
     {

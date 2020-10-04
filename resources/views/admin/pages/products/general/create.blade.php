@@ -13,15 +13,12 @@
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ __('mine.Home') }}</a>
+                                <li class="breadcrumb-item"><a href="">الرئيسية </a>
                                 </li>
-                                <li class="breadcrumb-item">
-                                  <a href="">
-                                        {{ __('mine.Products') }}
-                                      </a>
+                                <li class="breadcrumb-item"><a href="">
+                                        المنتجات </a>
                                 </li>
-                                <li class="breadcrumb-item active">
-                                  {{ __('mine.Add New Product') }}
+                                <li class="breadcrumb-item active"> أضافه منتج
                                 </li>
                             </ol>
                         </div>
@@ -35,7 +32,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form">{{ __('mine.Add New Product') }}</h4>
+                                    <h4 class="card-title" id="basic-layout-form"> أضافة منتج جديد </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -56,6 +53,8 @@
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
+
+
 
                                             <div class="form-body">
 
@@ -112,12 +111,12 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> الوصف المختصر
                                                             </label>
-                                                            <textarea  name="short-description" id="short-description"
+                                                            <textarea  name="short_description" id="short-description"
                                                                        class="form-control"
                                                                        placeholder=""
-                                                            >{{old('short-description')}}</textarea>
+                                                            >{{old('short_description')}}</textarea>
 
-                                                            @error("short-description")
+                                                            @error("short_description")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
@@ -150,7 +149,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> اختر ألعلامات الدلالية
                                                             </label>
-                                                            <select name="tags" class="select2 form-control" multiple>
+                                                            <select name="tags[]" class="select2 form-control" multiple>
                                                                 <optgroup label=" اختر ألعلامات الدلالية ">
                                                                     @if($tags && $tags -> count() > 0)
                                                                         @foreach($tags as $tag)
@@ -230,19 +229,5 @@
         </div>
     </div>
 
-@stop
 
-@section('script')
-
-    <script>
-        $('input:radio[name="type"]').change(
-            function(){
-                if (this.checked && this.value == '2') {  // 1 if main cat - 2 if sub cat
-                    $('#cats_list').removeClass('hidden');
-
-                }else{
-                    $('#cats_list').addClass('hidden');
-                }
-            });
-    </script>
-    @stop
+@endsection

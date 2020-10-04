@@ -151,7 +151,7 @@
         </a>
         <ul class="menu-content">
           <li>
-            <a class="menu-item" href="#" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Show All') }}</a>
+            <a class="menu-item" href="{{ route('products.index') }}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Show All') }}</a>
           </li>
           <li class="">
             <a class="menu-item" href="{{ route('products.general.create') }}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Add New One') }}</a>
