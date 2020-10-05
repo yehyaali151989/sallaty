@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Enumerations\CategoryType;
+use App\Http\Requests\ProductStockRequest;
 use App\Http\Requests\GeneralProductRequest;
 use App\Http\Requests\ProductPriceValidation;
 
@@ -96,5 +97,19 @@ class ProductsController extends Controller
             return redirect()->route('products.index')->with(['success' => 'تم التحديث بنجاح']);
         } catch (\Exception $ex) {
         }
+    }
+
+    public function getStock($product_id)
+    {
+
+        return view('admin.pages.products.stock.create')->with('id', $product_id);
+    }
+
+    public function saveProductStock(ProductStockRequest $request)
+    {
+
+        Product::whereId($request->product_id)->update($request->except(['_token', 'product_id']));
+
+        return redirect()->route('products.index')->with(['success' => 'تم التحديث بنجاح']);
     }
 }
