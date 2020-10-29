@@ -21,6 +21,7 @@
 <script type="text/javascript" src="{{asset('admin/app-assets/js/scripts/extensions/date-time-dropper.js')}}"></script>
 <script type="text/javascript" src="{{asset('admin/app-assets/js/scripts/forms/checkbox-radio.js')}}"></script>
 <script type="text/javascript" src="{{asset('admin/app-assets/js/scripts/modal/components-modal.js')}}"></script>
+<script src="{{asset('admin/app-assets/vendors/js/extensions/dropzone.min.js')}}" type="text/javascript"></script>
 <script>
 $('#meridians1').timeDropper({
 meridians: true,

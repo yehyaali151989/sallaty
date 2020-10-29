@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Tag;
 use App\Models\Brand;
+use App\Models\Image;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Enumerations\CategoryType;
 use App\Http\Requests\ProductStockRequest;
+use App\Http\Requests\ProductImagesRequest;
 use App\Http\Requests\GeneralProductRequest;
 use App\Http\Requests\ProductPriceValidation;
 
@@ -111,5 +113,42 @@ class ProductsController extends Controller
         Product::whereId($request->product_id)->update($request->except(['_token', 'product_id']));
 
         return redirect()->route('products.index')->with(['success' => 'تم التحديث بنجاح']);
+    }
+
+    public function addImages($product_id)
+    {
+        return view('admin.pages.products.images.create')->withId($product_id);
+    }
+
+    //to save images to folder only
+    public function saveProductImages(Request $request)
+    {
+
+        $file = $request->file('dzfile');
+        $filename = uploadImage('products', $file);
+
+        return response()->json([
+            'name' => $filename,
+            'original_name' => $file->getClientOriginalName(),
+        ]);
+    }
+
+    public function saveProductImagesDB(ProductImagesRequest $request)
+    {
+
+        try {
+            // save dropzone images
+            if ($request->has('document') && count($request->document) > 0) {
+                foreach ($request->document as $image) {
+                    Image::create([
+                        'product_id' => $request->product_id,
+                        'photo' => $image,
+                    ]);
+                }
+            }
+
+            return redirect()->route('products.index')->with(['success' => 'تم التحديث بنجاح']);
+        } catch (\Exception $ex) {
+        }
     }
 }

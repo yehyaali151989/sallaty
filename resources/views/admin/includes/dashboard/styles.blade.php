@@ -25,3 +25,6 @@
 <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/vendors/css/extensions/datedropper.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/vendors/css/extensions/timedropper.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/'.getFolder().'/my-style.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/vendors/css/file-uploaders/dropzone.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css-rtl/plugins/file-uploaders/dropzone.min.css')}}">

@@ -62,6 +62,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'products' => [
+            'driver' => 'local',
+            'root' => public_path('admin/uploads/products'),
+            'url' => env('APP_URL') . '/storage',
+            'visibility' => 'public',
+        ],
+
         'admins' => [
             'driver' => 'local',
             'root' => public_path('admin/uploads/admins'),

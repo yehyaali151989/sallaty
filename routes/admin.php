@@ -75,6 +75,10 @@ Route::group(
 
                 Route::get('stock/{id}', 'ProductsController@getStock')->name('products.stock');
                 Route::post('stock', 'ProductsController@saveProductStock')->name('products.stock.store');
+
+                Route::get('images/{id}', 'ProductsController@addImages')->name('admin.products.images');
+                Route::post('images', 'ProductsController@saveProductImages')->name('admin.products.images.store');
+                Route::post('images/db', 'ProductsController@saveProductImagesDB')->name('admin.products.images.store.db');
             });
             // ================================== End Products ============================================ //
 

@@ -73,8 +73,8 @@
       {{-- Start Main Categories  --}}
       <li class=" nav-item">
         <a href="#">
-          <i class="ft-settings"></i>
-          <span class="menu-title" data-i18n="nav.dash.main">{{ __('mine.Main Categories') }}</span>
+          <i class="ft-layers"></i>
+          <span class="menu-title" data-i18n="nav.dash.main">{{ __('Categories') }}</span>
           <span id="span-count" class="badge badge badge-info badge-pill float-right mr-2">{{ App\Models\Category::count() }}</span>
         </a>
         <ul class="menu-content">
@@ -109,7 +109,7 @@
       {{-- Start Brands  --}}
       <li class=" nav-item">
         <a href="#">
-          <i class="ft-settings"></i>
+          <i class="ft-bookmark"></i>
           <span class="menu-title" data-i18n="nav.dash.main">{{ __('mine.Brands') }}</span>
           <span id="span-count" class="badge badge badge-info badge-pill float-right mr-2">{{ App\Models\Brand::count() }}</span>
         </a>
@@ -124,10 +124,10 @@
       </li>
       {{-- End Brands  --}}
 
-      {{-- Start Brands  --}}
+      {{-- Start Tags  --}}
       <li class=" nav-item">
         <a href="#">
-          <i class="ft-settings"></i>
+          <i class="ft-tag"></i>
           <span class="menu-title" data-i18n="nav.dash.main">{{ __('mine.Tags') }}</span>
           <span id="span-count" class="badge badge badge-info badge-pill float-right mr-2">{{ App\Models\Tag::count() }}</span>
         </a>
@@ -140,12 +140,12 @@
           </li>
         </ul>
       </li>
-      {{-- End Brands  --}}
+      {{-- End Tags  --}}
 
       {{-- Start Products  --}}
       <li class=" nav-item">
         <a href="#">
-          <i class="ft-settings"></i>
+          <i class="ft-server"></i>
           <span class="menu-title" data-i18n="nav.dash.main">{{ __('mine.Products') }}</span>
           <span id="span-count" class="badge badge badge-info badge-pill float-right mr-2">{{ App\Models\Product::count() }}</span>
         </a>
