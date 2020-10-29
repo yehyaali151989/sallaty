@@ -160,26 +160,46 @@
       </li>
       {{-- End Products  --}}
 
-      {{-- Start Products Attributes --}}
-      <li class="nav-item">
-        <a href="">
-          <i class="la la-male"></i>
+       {{-- Start Products Attributes --}}
+      <li class=" nav-item">
+        <a href="#">
+          <i class="ft-server"></i>
           <span class="menu-title" data-i18n="nav.dash.main">خصائص المنتج  </span>
-          <span  class="badge badge badge-success badge-pill float-right mr-2"> </span>
+          <span id="span-count" class="badge badge badge-info badge-pill float-right mr-2">{{ App\Models\Attribute::count() }}</span>
         </a>
         <ul class="menu-content">
-            <li class="active"><a class="menu-item" href="{{route('admin.attributes')}}"
-                                  data-i18n="nav.dash.ecommerce"> عرض الكل </a>
-            </li>
-            <li><a class="menu-item" href="{{route('admin.attributes.create')}}" data-i18n="nav.dash.crypto">أاضافة
-                    جديدة </a>
-            </li>
+          <li>
+            <a class="menu-item" href="{{route('admin.attributes')}}" data-i18n="nav.templates.vert.classic_menu">عرض الكل</a>
+          </li>
+          <li class="">
+            <a class="menu-item" href="{{route('admin.attributes.create')}}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Add New One') }}</a>
+          </li>
         </ul>
-    </li>
+      </li>
       {{-- End Products  Attributes--}}
 
-      
+      {{-- Start Products Attributes Options--}}
+      <li class=" nav-item">
+        <a href="#">
+          <i class="ft-server"></i>
+          <span class="menu-title" data-i18n="nav.dash.main">قيم الخصائص  </span>
+          <span id="span-count" class="badge badge badge-info badge-pill float-right mr-2">{{ App\Models\Option::count() }}</span>
+        </a>
+        <ul class="menu-content">
+          <li>
+            <a class="menu-item" href="{{route('admin.options')}}" data-i18n="nav.templates.vert.classic_menu">عرض الكل</a>
+          </li>
+          <li class="">
+            <a class="menu-item" href="{{route('admin.options.create')}}" data-i18n="nav.templates.vert.classic_menu">{{ __('mine.Add New One') }}</a>
+          </li>
+        </ul>
+      </li>
+      {{-- End Products  Attributes OPtions--}}
 
     </ul>
   </div>
 </div>
+
+
+
+

@@ -32,8 +32,8 @@ class Attribute extends Model
     public $translatedAttributes = ['name'];
 
 
-    // public  function options()
-    // {
-    //     return $this->hasMany(Option::class, 'attribute_id');
-    // }
+    public  function options()
+    {
+        return $this->hasMany(Option::class, 'attribute_id');
+    }
 }

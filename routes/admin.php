@@ -93,6 +93,17 @@ Route::group(
             });
             ################################## end attributes    #######################################
 
+            ################################## brands options ######################################
+            Route::group(['prefix' => 'options'], function () {
+                Route::get('/', 'OptionsController@index')->name('admin.options');
+                Route::get('create', 'OptionsController@create')->name('admin.options.create');
+                Route::post('store', 'OptionsController@store')->name('admin.options.store');
+                Route::get('delete/{id}', 'OptionsController@destroy')->name('admin.options.delete');
+                //Route::get('edit/{id}','AttributesController@edit') -> name('admin.attributes.edit');
+                //Route::post('update/{id}','AttributesController@update') -> name('admin.attributes.update');
+            });
+            ################################## end options    #######################################
+
         });
 
         Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin', 'prefix' => 'admin'], function () {
