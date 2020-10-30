@@ -90,15 +90,23 @@ class Product extends Model
         return  $this->is_active  == 1 ?  'غير مفعل'   : 'مفعل';
     }
 
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', 1);
+    }
+
     public function categories()
     {
         return $this->belongsToMany(Category::class, 'products_categories');
     }
 
-
-
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'products_tags');
+    }
+
+    public function options()
+    {
+        return $this->hasMany(Option::class, 'product_id');
     }
 }
